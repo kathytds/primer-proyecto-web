@@ -1,10 +1,18 @@
-<header>
-<nav>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-    </ul>
-</nav>
+---
+import ImageBrainwave from "../assets/BrainWave_LogoAssets_BrainWaveLogo_alt-1568x1568.png";
+---
 
+<header>
+    <nav>
+        <div>
+            <img src={ImageBrainwave.src} alt="" width="56" height="56" />
+        </div>
+        <ul>
+            <li><a href="/">Servicios</a></li>
+            <li><a href="/">Presentacion</a></li>
+            <li><a href="/">Reviews</a></li>
+            <li><a href="/">Contacto</a></li>
+        </ul>
+        <button class="favorite styled" type="button">Inicia Sesion</button>
+    </nav>
 </header>
