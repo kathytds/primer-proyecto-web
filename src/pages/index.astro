@@ -1,11 +1,18 @@
 ---
 
 import Layout from '../layouts/Layout.astro';
+import Jumbotron from '../components/Jumbotron.astro';
+import Servicios from '../components/Servicios.astro';
+import Presentacion from '../components/Presentacion.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	esta es la ruta inicial
+	<Jumbotron />
+
+	<Servicios />
+
+	<Presentacion title="Presentacion" subtitle="Somos una empresa dedicada a la produccion de audio, con un equipo de profesionales altamente capacitados y con amplia experiencia en el sector. Nos especializamos en ofrecer servicios de grabacion, edicion, mezcla y masterizacion de audio para todo tipo de proyectos." />
 </Layout>

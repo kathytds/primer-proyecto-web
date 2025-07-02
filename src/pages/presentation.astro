@@ -1,17 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
----
-
+import PresentationComponent from "../components/Presentacion.astro";
 ---
 
 <Layout>
-    <a href="presentation.astro"></a>
-    <h1>Presentacion</h1>
-    <h3>
-        Somos una empresa dedicada a la produccion de audio, con un equipo de
-        profesionales altamente capacitados y con amplia experiencia en el
-        sector. Nos especializamos en ofrecer servicios de grabacion, edicion,
-        mezcla y masterizacion de audio para todo tipo de proyectos.
-    </h3>
-    <p>Escuchar Demos</p>
+    <PresentationComponent
+        title="Presentacion"
+        subtitle="Somos una empresa dedicada a la produccion de audio, con un equipo de profesionales altamente capacitados y con amplia experiencia en el sector. Nos especializamos en ofrecer servicios de grabacion, edicion, mezcla y masterizacion de audio para todo tipo de proyectos."
+    />
 </Layout>
