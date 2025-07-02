@@ -1,0 +1,24 @@
+* {
+    padding: unset margin: unset;
+    border: unset;
+    outline: unset;
+
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+
+
+}
+
+ul {
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
