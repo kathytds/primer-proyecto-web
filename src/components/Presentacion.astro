@@ -11,5 +11,14 @@ const { title, subtitle } = Astro.props;
 <div>
     <h1>{title}</h1>
     <p>{subtitle}</p>
-    <button>Escuchar Demos</button>
+    <button class="button">Escuchar Demos</button>
 </div>
+<style>
+.button {
+    background-color: orange;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-weight: 500;
+    color: white
+}
+</style>

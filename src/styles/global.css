@@ -1,8 +1,10 @@
 * {
-    padding: unset margin: unset;
+    padding: unset;
+    margin: unset;
     border: unset;
     outline: unset;
 
+    box-sizing: border-box;
 }
 
 body {

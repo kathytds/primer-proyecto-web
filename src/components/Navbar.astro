@@ -1,22 +1,52 @@
 ---
+import type { GetStaticPaths } from "astro";
 import ImageBrainwave from "../assets/BrainWave_LogoAssets_BrainWaveLogo_alt-1568x1568.png";
 ---
 
 <header>
-    <nav>
+    <nav class="barra">
         <div>
             <a href="/">
                 <img src={ImageBrainwave.src} alt="" width="56" height="56" />
             </a>
         </div>
-        <ul>
+        <ul class="enlaces">
             <li><a href="/services">Servicios</a></li>
             <li><a href="/presentation">Presentacion</a></li>
             <li><a href="/reviews">Reviews</a></li>
             <li><a href="/contact">Contacto</a></li>
+            <li><a href="/FAQ"></a></li>
         </ul>
         <a href="/login">
-            <button class="favorite styled" type="button">Iniciar Sesion</button>
+            <button class="button" type="button">Iniciar Sesion</button>
         </a>
     </nav>
 </header>
+
+<style>
+    .barra {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 120px;
+        background-color: white;
+
+    }
+    .enlaces {
+    display: flex;
+    gap: 26px;
+}
+
+.enlaces a {
+    font-weight: 500;
+}
+
+.button {
+    background-color: orange;
+    padding: 12px 32px;
+    border-radius: 3px;
+    font-weight: 600;
+    color: white
+}
+
+</style>
