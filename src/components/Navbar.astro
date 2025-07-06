@@ -1,13 +1,13 @@
 ---
 import type { GetStaticPaths } from "astro";
-import ImageBrainwave from "../assets/BrainWave_LogoAssets_BrainWaveLogo_alt-1568x1568.png";
+import logosound from "../assets/logosound.png";
 ---
 
 <header>
     <nav class="barra">
         <div>
             <a href="/">
-                <img src={ImageBrainwave.src} alt="" width="56" height="56" />
+                <img src={logosound.src} alt="" width="56" height="56" />
             </a>
         </div>
         <ul class="enlaces">
@@ -42,7 +42,7 @@ import ImageBrainwave from "../assets/BrainWave_LogoAssets_BrainWaveLogo_alt-156
 }
 
 .button {
-    background-color: orange;
+    background-color: rgb(190, 105, 119);
     padding: 12px 32px;
     border-radius: 3px;
     font-weight: 600;
