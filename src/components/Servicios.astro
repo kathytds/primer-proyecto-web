@@ -3,16 +3,20 @@
 ---
 
 <a href="services.astro"></a>
-<div>
+<div class="title-container">
     <h1>Nuestros Servicios</h1>
     <p>
         Ofrecemos una amplia gama de servicios de produccion de audio incluyendo
         grabacion, edicion, mezcla y masterizacion.
     </p>
+</div>
+<div>
     <div class="services-list">
         <slot name="services-list">
             <ul>
-                <div class="grabacion"><li>Grabacion de voz en off</li></div>
+                <div class="grabacion">
+                    <li>Grabacion de voz en off</li>
+                </div>
                 <div class="edicion"><li>Edicion de audio</li></div>
                 <div class="mezcla"><li>Mezcla y masterizacion</li></div>
             </ul>
@@ -20,14 +24,11 @@
     </div>
 </div>
 
-
 <style>
     .services-list {
         display: flex;
-        flex-wrap: wrap;
+        gap: 1rem;
         justify-content: center;
-        align-items: center;
-        gap: 20px;
     }
     .grabacion {
         background-color: #f0f0f0;

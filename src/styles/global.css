@@ -25,3 +25,16 @@ a {
     text-decoration: none;
     color: black;
 }
+
+.title-container {
+    max-width: 720px;
+    margin: auto;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.title-container>* {
+    text-align: center;
+}
