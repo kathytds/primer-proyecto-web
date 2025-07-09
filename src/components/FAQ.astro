@@ -2,6 +2,7 @@
 
 ---
 <a href="FAQ.astro">  </a>
+<div class="preguntas">
 <div class="title-container">
     <h1>Preguntas Frecuentes</h1>
     <p>
@@ -27,3 +28,24 @@
         contactarnos por correo electrónico o a través de nuestro chat en vivo.
     </p>
 </div>
+</div>
+<style>
+    .preguntas {
+        padding: 2rem;
+        background-color: pink;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .title-container > * {
+        text-align: center;
+    }
+    .title-container {
+        max-width: 720px;
+        margin: auto;
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }

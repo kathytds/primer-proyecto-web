@@ -8,6 +8,8 @@ const { title, subtitle } = Astro.props;
 ---
 
 <a href="presentation.astro"></a>
+<div class="presentation">
+  
 <div class="title-container">
   <h1>{title}</h1>
   <p>{subtitle}</p>
@@ -34,9 +36,18 @@ const { title, subtitle } = Astro.props;
       <span class="icon material-symbols-outlined"> play_circle </span></button
     >
   </div>
+</div> 
 </div>
 
 <style>
+  .presentation {
+    padding: 2rem;
+    background-color: pink;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
   .title-container > * {
     text-align: center;
   }

@@ -9,12 +9,40 @@ import Layout from "../layouts/Layout.astro"
   <p>
     Aqui puedes encontrar nuestros precios y paquetes disponibles
   </p>
+  <div class="pricing-container">
+    <ul>
+      <li>
+        <h2>Paquete Básico</h2>
+        <p>Incluye servicios básicos de sonido y luces.</p>
+        <p>Precio: $500</p>
+      </li>
+      <li>
+        <h2>Paquete Avanzado</h2>
+        <p>Incluye servicios avanzados de sonido, luces y efectos especiales.</p>
+        <p>Precio: $1000</p>
+      </li>
+      <li>
+        <h2>Paquete Premium</h2>
+        <p>Incluye todos los servicios del paquete avanzado más personalización completa.</p>
+        <p>Precio: $1500</p>
+      </li>
+    </ul>
 </Layout>
 
-  </p>
 </Layout>
 
 <style>
+  .pricing-container {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   h1 {
     text-align: center;
     margin-top: 20px;
