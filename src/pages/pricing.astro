@@ -1,34 +1,38 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <h1>
-    Precios
-  </h1>
-  <p>
-    Aqui puedes encontrar nuestros precios y paquetes disponibles
-  </p>
+  <h1>Precios</h1>
+  <p>Aqui puedes encontrar nuestros precios y paquetes disponibles</p>
   <div class="pricing-container">
     <ul>
       <li>
         <h2>Paquete Básico</h2>
-        <p>Incluye servicios básicos de sonido y luces.</p>
+        <p>Grabacion de voz en off para tu campana publicitaria.</p>
         <p>Precio: $500</p>
+        <button>Seleccionar</button>
       </li>
       <li>
         <h2>Paquete Avanzado</h2>
-        <p>Incluye servicios avanzados de sonido, luces y efectos especiales.</p>
+        <p>
+          Grabacion de voz en off para tu campana publicitaria con edicion de
+          audio incluida.
+        </p>
         <p>Precio: $1000</p>
+        <button>Seleccionar</button>
       </li>
       <li>
         <h2>Paquete Premium</h2>
-        <p>Incluye todos los servicios del paquete avanzado más personalización completa.</p>
+        <p>
+          Incluye todos los servicios del paquete avanzado más personalización
+          completa.
+        </p>
         <p>Precio: $1500</p>
+        <button>Seleccionar</button>
       </li>
     </ul>
-</Layout>
-
+  </div>
 </Layout>
 
 <style>
@@ -45,11 +49,41 @@ import Layout from "../layouts/Layout.astro"
   }
   h1 {
     text-align: center;
-    margin-top: 20px;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    text-align: center;
   }
 
   p {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
+  }
+  button {
+    background-color: pink;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:
+      background-color 0.3s,
+      opacity 0.3s;
+    display: block;
+    margin: 0 auto;
+  }
+  .button {
+    background-color: pink;
+    padding: 12px 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    color: white;
+    transition:
+      background-color 0.3s,
+      color 0.3s;
+  }
+  .button:hover {
+    background-color: #fd78bb;
+    opacity: 0.8;
   }
 </style>

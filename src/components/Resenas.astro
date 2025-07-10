@@ -1,21 +1,47 @@
 ---
 
 ---
+
 <a href="reviews.astro/"></a>
 
 <div class="title-container">
     <h1>Reseñas de Clientes</h1>
     <p>Aquí están algunas reseñas de nuestros clientes satisfechos.</p>
-    <div>
-        <ul>
-            <li>"Excelente servicio y calidad de sonido."</li>
-            <li>"Muy profesionales y atentos a los detalles."</li>
-            <li>"Recomiendo sus servicios a todos mis colegas."</li>
+    <ul><div class="image-container">
+        <div class="image-container__item client1"></div><li>"Excelente servicio y calidad de sonido."</li>
+        <div class="image-container__item client2"></div> <li>"Muy profesionales y atentos a los detalles."</li>
+        <div class="image-container__item client3"></div><li>"Recomiendo sus servicios a todos mis colegas."</li>
         </ul>
     </div>
+
+</div>
+<!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">Slide 1</div>
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div>
+    ...
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
 </div>
 
 <style>
+    .imagen {
+        display: flex;
+        justify-content: left;
+        margin-bottom: 1rem;
+    }
     .title-container {
         padding: 2rem;
         background-color: transparent;
@@ -24,19 +50,74 @@
         margin-bottom: 2rem;
     }
     .title-container > * {
-        text-align: center;
+        text-align: right;
     }
     .title-container h1 {
-        margin-bottom: 1rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
-    .title-container p {
+    .title-container p{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
         margin-bottom: 1rem;
     }
     .title-container ul {
         list-style-type: none;
         padding: 0;
+        justify-content: right;
     }
     .title-container li {
         margin-bottom: 0.5rem;
+        justify-content: right;
+    }
+
+    .image-container {
+        display: flex;
+        gap: 1rem;
+        display: flow-root;
+    }
+
+    .image-container__item {
+        width: 200px;
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 12px;
+        display: flex;
+        margin-bottom: 1rem;
+    }
+    .client1 {
+        background-image: url("/client1.jpg");
+    }
+    .client2 {
+        background-image: url("/client2.webp");
+    }
+    .client3 {
+        background-image: url("/client3.webp");
     }
 </style>
+<script>
+// core version + navigation, pagination modules:
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+// import Swiper and modules styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+// init Swiper:
+const swiper = new Swiper('.swiper', {
+  // configure Swiper to use modules
+  modules: [Navigation, Pagination],
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  }
+});
+</script>

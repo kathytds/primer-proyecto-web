@@ -47,3 +47,7 @@ a {
     background-color: whitesmoke;
     text-align: center;
 }
+
+.custom-cursor {
+    cursor: url("https://i.gifer.com/Oxh7.gif"), pointer;
+}
