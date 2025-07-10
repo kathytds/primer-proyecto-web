@@ -4,13 +4,10 @@
 
 <a href="reviews.astro/"></a>
 
-<div class="title-container">
+<div class="jumbotron">
     <h1>Reseñas de Clientes</h1>
     <p>Aquí están algunas reseñas de nuestros clientes satisfechos.</p>
-    <ul><div class="image-container">
-        <div class="image-container__item client1"></div><li>"Excelente servicio y calidad de sonido."</li>
-        <div class="image-container__item client2"></div> <li>"Muy profesionales y atentos a los detalles."</li>
-        <div class="image-container__item client3"></div><li>"Recomiendo sus servicios a todos mis colegas."</li>
+    <ul><div><li>"Recomiendo sus servicios a todos mis colegas."</li></div>
         </ul>
     </div>
 
@@ -42,11 +39,16 @@
         justify-content: left;
         margin-bottom: 1rem;
     }
-    .title-container {
-        padding: 2rem;
-        background-color: transparent;
-        border-radius: 12px;
-        margin-top: 2rem;
+   .jumbotron {
+        background-image: url('/client.jpg'), url('/client2.jpg'), url('/client3.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 120px 60px;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        gap: 34px;
         margin-bottom: 2rem;
     }
     .title-container > * {
