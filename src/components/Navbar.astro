@@ -16,7 +16,8 @@ import logosound from "../assets/logosound.png";
             <li><a href="/reviews">Reseñas</a></li>
             <li><a href="/contact">Contacto</a></li>
             <li><a href="/pricing">Precios</a></li>
-            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/pf">Preguntas Frecuentes</a></li>
+            <li><a href="/aboutus">Sobre Nosotros</a></li>
         </ul>
         <a href="/login">
             <button class="button" type="button">Iniciar Sesion</button>
@@ -32,28 +33,32 @@ import logosound from "../assets/logosound.png";
         padding: 12px 120px;
         background-color: white;
         opacity: 5;
-
+        position: fixed;
+        top: 0;
+        width: 100%;
+        transition: top 0.3s;
     }
     .enlaces {
-    display: flex;
-    gap: 26px;
-}
+        display: flex;
+        gap: 26px;
+    }
 
-.enlaces a {
-    font-weight: 500;
-}
+    .enlaces a {
+        font-weight: 500;
+    }
 
-.button {
-    background-color: pink;
-    padding: 12px 32px;
-    border-radius: 12px;
-    font-weight: 600;
-    color: white;
-    transition: background-color 0.3s, color 0.3s;
-}
-.button:hover {
-    background-color: #fe85c2; /* Cambia el color al pasar el mouse */
-    opacity: 0.8; /* Añade un efecto de opacidad */
-}
-
+    .button {
+        background-color: pink;
+        padding: 12px 32px;
+        border-radius: 12px;
+        font-weight: 600;
+        color: white;
+        transition:
+            background-color 0.3s,
+            color 0.3s;
+    }
+    .button:hover {
+        background-color: #fe85c2; /* Cambia el color al pasar el mouse */
+        opacity: 0.8; /* Añade un efecto de opacidad */
+    }
 </style>

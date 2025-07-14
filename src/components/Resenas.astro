@@ -7,33 +7,47 @@
 <div class="jumbotron">
     <h1>Reseñas de Clientes</h1>
     <p>Aquí están algunas reseñas de nuestros clientes satisfechos.</p>
-    <ul><div><li>"Recomiendo sus servicios a todos mis colegas."</li></div>
-        </ul>
-    </div>
+
 
 </div>
-<!-- Slider main container -->
 <div class="swiper">
-  <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide"><img src=client1.jpg></div>
-    <div class="swiper-slide"><img src=client2.webp></div>
-    <div class="swiper-slide"><img src=client3.webp></div>
+    <div class="swiper-slide">
+      <div class="slide-content">
+        <img src="client1.jpg" alt="Cliente 1" />
+        <p class="slide-text">"Excelente servicio, muy recomendado."</p>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="slide-content">
+        <img src="client2.webp" alt="Cliente 2" />
+        <p class="slide-text">"Muy profesionales y atentos."</p>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="slide-content">
+        <img src="client3.webp" alt="Cliente 3" />
+        <p class="slide-text">"Resultados increíbles."</p>
+      </div>
+    </div>
     ...
   </div>
-  <!-- If we need pagination -->
   <div class="swiper-pagination"></div>
 
-  <!-- If we need navigation buttons -->
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
 
-  <!-- If we need scrollbar -->
   <div class="swiper-scrollbar"></div>
+  <div class="swiper-slide" data-swiper-autoplay="2000">
 </div>
 
 <style>
+    .jumbotron {
+        background-color: #f8f9fa;
+        padding: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
     .imagen {
         display: flex;
         justify-content: left;
@@ -88,19 +102,31 @@
     .client3 {
         background-image: url("/client3.webp");
     }
+
+    .swiper {
+    width: 100%;
+    max-width: 900px; /* or any desired max width */
+    height: 500px;    /* set desired height */
+    margin: 0 auto;   /* center horizontally */
+}
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 </style>
 <script>
 // core version + navigation, pagination modules:
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 // import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+Swiper.use([Navigation, Pagination, Autoplay]);
 
 // init Swiper:
 const swiper = new Swiper('.swiper', {
-  // configure Swiper to use modules
   modules: [Navigation, Pagination],
   navigation: {
     nextEl: '.swiper-button-next',
@@ -109,6 +135,11 @@ const swiper = new Swiper('.swiper', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
-  }
+  },
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+  loop: true,
 });
 </script>
