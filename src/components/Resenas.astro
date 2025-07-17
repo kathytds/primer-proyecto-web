@@ -5,30 +5,37 @@
 <a href="reviews.astro/"></a>
 
 <div class="jumbotron">
-    <h1>Reseñas de Clientes</h1>
-    <p>Aquí están algunas reseñas de nuestros clientes satisfechos.</p>
-
-
+  <h1>Reseñas de Clientes</h1>
+  <p>Aquí están algunas reseñas de nuestros clientes satisfechos.</p>
 </div>
 <div class="swiper">
   <div class="swiper-wrapper">
+
     <div class="swiper-slide">
+
       <div class="slide-content">
         <img src="client1.jpg" alt="Cliente 1" />
         <p class="slide-text">"Excelente servicio, muy recomendado."</p>
       </div>
+
     </div>
+
     <div class="swiper-slide">
+
       <div class="slide-content">
         <img src="client2.webp" alt="Cliente 2" />
         <p class="slide-text">"Muy profesionales y atentos."</p>
       </div>
+
     </div>
+
     <div class="swiper-slide">
+
       <div class="slide-content">
         <img src="client3.webp" alt="Cliente 3" />
         <p class="slide-text">"Resultados increíbles."</p>
       </div>
+
     </div>
     ...
   </div>
@@ -38,108 +45,115 @@
   <div class="swiper-button-next"></div>
 
   <div class="swiper-scrollbar"></div>
-  <div class="swiper-slide" data-swiper-autoplay="2000">
-</div>
+  <div class="swiper-slide" data-swiper-autoplay="2000"></div>
 
-<style>
+  <style>
     .jumbotron {
-        background-color: #f8f9fa;
-        padding: 2rem;
-        text-align: center;
-        margin-bottom: 2rem;
+      background-color: #f8f9fa;
+      padding: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
     }
     .imagen {
-        display: flex;
-        justify-content: left;
-        margin-bottom: 1rem;
-    }
-    
-    .title-container > * {
-        text-align: right;
-    }
-    .title-container h1 {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-    .title-container p{
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-    .title-container ul {
-        list-style-type: none;
-        padding: 0;
-        justify-content: right;
-    }
-    .title-container li {
-        margin-bottom: 0.5rem;
-        justify-content: right;
+      display: flex;
+      justify-content: left;
+      margin-bottom: 1rem;
     }
 
-    .image-container {
-        display: flex;
-        gap: 1rem;
-        display: flow-root;
+    .title-container > * {
+      text-align: right;
+    }
+    .title-container h1 {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .title-container p {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .title-container ul {
+      list-style-type: none;
+      padding: 0;
+      justify-content: right;
+    }
+    .title-container li {
+      margin-bottom: 0.5rem;
+      justify-content: right;
+    }
+
+    /* .image-container {
+      display: flex;
+      gap: 1rem;
+      display: flow-root;
     }
 
     .image-container__item {
-        width: 200px;
-        height: 200px;
-        background-size: cover;
-        background-position: center;
-        border-radius: 12px;
-        display: flex;
-        margin-bottom: 1rem;
+      width: 200px;
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      display: flex;
+      margin-bottom: 1rem;
+    } */
+
+    .slide-content {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      display: flex;
+      justify-content: center;
+      align-items: end;
     }
-    .client1 {
-        background-image: url("/client1.jpg");
-    }
-    .client2 {
-        background-image: url("/client2.webp");
-    }
-    .client3 {
-        background-image: url("/client3.webp");
+    .slide-content img {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .swiper {
-    width: 100%;
-    max-width: 900px; /* or any desired max width */
-    height: 500px;    /* set desired height */
-    margin: 0 auto;   /* center horizontally */
-}
-.swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-</style>
-<script>
-// core version + navigation, pagination modules:
-import Swiper from 'swiper';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-// import Swiper and modules styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-Swiper.use([Navigation, Pagination, Autoplay]);
+      width: 100%;
+      max-width: 900px; /* or any desired max width */
+      height: 500px; /* set desired height */
+      margin: 0 auto; /* center horizontally */
+    }
+  </style>
+  <script>
+    // core version + navigation, pagination modules:
+    import Swiper from "swiper";
+    import { Navigation, Pagination, Autoplay } from "swiper/modules";
+    // import Swiper and modules styles
+    import "swiper/css";
+    import "swiper/css/navigation";
+    import "swiper/css/pagination";
+    Swiper.use([Navigation, Pagination, Autoplay]);
 
-// init Swiper:
-const swiper = new Swiper('.swiper', {
-  modules: [Navigation, Pagination],
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: false,
-  },
-  loop: true,
-});
-</script>
+    // init Swiper:
+    const swiper = new Swiper(".swiper", {
+      modules: [Navigation, Pagination],
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      slidesPerView: 2,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      // autoplay: {
+      //   delay: 2000,
+      //   disableOnInteraction: false,
+      // },
+      loop: true,
+    });
+  </script>
+</div>
