@@ -15,7 +15,7 @@
 
       <div class="slide-content">
         <img src="client1.jpg" alt="Cliente 1" />
-        <p class="slide-text">"Excelente servicio, muy recomendado."</p>
+        <p class="slide-text">"Gracias a sus servicios, mi negocio ha tenido un crecimiento del más de 90% en ventas después de haber estado al borde de la quiebra." Andrea, CEO de Charlotte</p>
       </div>
 
     </div>
@@ -24,7 +24,7 @@
 
       <div class="slide-content">
         <img src="client2.webp" alt="Cliente 2" />
-        <p class="slide-text">"Muy profesionales y atentos."</p>
+        <p class="slide-text">"Antes de encontrar sus servicios, mi negocio no tenia visibilidad en línea y las ventas eran mínimas. Ahora, somos reconocidos a nivel global y mi papá finalmente está orgulloso de mí." Jefferson, Fundador de Ruedas y Suspensiones</p>
       </div>
 
     </div>
@@ -33,7 +33,7 @@
 
       <div class="slide-content">
         <img src="client3.webp" alt="Cliente 3" />
-        <p class="slide-text">"Resultados increíbles."</p>
+        <p class="slide-text">"Jamás había trabajado con un equipo tan efectivo, profesional y creativo, hasta que encontré sus servicios. De no ser por sus campañas de advertising, estaría en bancarrota. Gracias por cambiar mi vida para siempre." Maria Luisa, Gerente de Marketing de Mundo Total</p>
       </div>
 
     </div>
@@ -119,6 +119,19 @@
       height: 100%;
       object-fit: cover;
     }
+    .slide-text {
+      background: rgba(255, 255, 255, 0.85); /* semi-transparent white */
+      padding: 1rem;
+      border-radius: 12px;
+      margin: 1rem;
+      color: #333;
+      font-size: 1.1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      position: relative;
+      z-index: 1;
+      max-width: 80%;
+      text-align: center;
+    }
 
     .swiper {
       width: 100%;
@@ -149,10 +162,10 @@
         el: ".swiper-pagination",
         clickable: true,
       },
-      // autoplay: {
-      //   delay: 2000,
-      //   disableOnInteraction: false,
-      // },
+      autoplay: {
+         delay: 8000,
+         disableOnInteraction: false,
+      },
       loop: true,
     });
   </script>
