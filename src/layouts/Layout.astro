@@ -13,6 +13,12 @@ import "../styles/global.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Kathy's Sounds</title>
+
+<meta property="og:title" content="Kathy's Sounds" />
+<meta property="og:type" content="image/png" />
+<meta property="og:url" content="https://www.kathyssounds.com" />
+<meta property="og:image" content="https://kathyssounds.com/logosound.png" />
+
     <link rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -269,6 +275,5 @@ import "../styles/global.css";
 
   // Listen for the scroll event and log the event data
   lenis.on("scroll", (e) => {
-    console.log(e);
   });
 </script>
